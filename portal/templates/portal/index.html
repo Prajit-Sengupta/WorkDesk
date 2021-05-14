@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/portal/static/portal/css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="navigation">
+        <ul>
+            <li>
+                <a href="#" onclick="home()">
+                    <span class="icon"><i class="fas fa-home"></i></i></span>
+                    <span class="title">Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" onclick="tasks()">
+                    <span class="icon"><i class="fas fa-tasks"></i></span>
+                    <span class="title">My Tasks</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" onclick="messages()">
+                    <span class="icon"><i class="fas fa-comment"></i></i></span>
+                    <span class="title">Messages</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" onclick="calendar()">
+                    <span class="icon"><i class="fas fa-calendar-alt"></i></span>
+                    <span class="title">Calendar</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" onclick="team()">
+                    <span class="icon"><i class="fas fa-users"></i></span>
+                    <span class="title">My Team</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" onclick="setting()">
+                    <span class="icon"><i class="fas fa-user-cog"></i></span>
+                    <span class="title">Setting</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="icon"><i class="fas fa-sign-out-alt"></i></span>
+                    <span class="title">Sign Out</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="home main-content" id="home">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse quia ducimus itaque dolorum at reiciendis cumque magnam quae alias. Vel!
+        </p>
+    </div>
+    <div class="myTasks main-content" id="myTasks">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, voluptatem. Ipsum sit et totam culpa aut nostrum? Distinctio dolor culpa quo fugit inventore incidunt rem exercitationem harum, molestias deserunt libero blanditiis sit voluptatem aut necessitatibus ad natus eligendi et dolorum eos omnis quibusdam? Necessitatibus ratione corporis rerum quidem laboriosam odit?
+        </p>
+    </div>
+    <div class="messages main-content" id="messages">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur explicabo quia voluptates atque eveniet numquam quidem architecto ea dicta, reprehenderit beatae neque laudantium fuga dolores. Omnis voluptas hic ipsum dicta!
+        </p>
+    </div>
+    <div class="calendar main-content" id="calendar">
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis doloremque, sapiente soluta doloribus inventore, rerum optio iste in minus odio, molestiae commodi sed accusamus amet aspernatur nemo libero facere? Quas soluta totam repellat ducimus cum temporibus ex minima quidem reiciendis quisquam corporis enim, harum rem accusantium molestiae dignissimos earum ad quasi quibusdam odio maiores. Vero quod maxime porro. Hic, illo.
+        </p>
+    </div>
+    <div class="myTeam main-content" id="myTeam">
+        <p>Lorem ipsum dolor sit amet.
+        </p>
+    </div>
+    <div class="setting main-content" id="setting">
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat minima, modi ullam temporibus facere dolor excepturi commodi iste. Quos sint iure ea quasi explicabo necessitatibus?
+        </p>
+    </div>
+    <div class="toggle" onclick="toggleMenu()"></div>
+    <script src="https://kit.fontawesome.com/7f967191d3.js" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        function toggleMenu() {
+            let navigation = document.querySelector('.navigation')
+            navigation.classList.toggle('active');
+            let toggle = document.querySelector('.toggle')
+            toggle.classList.toggle('active');
+        }
+
+
+        var h=document.getElementById('home');
+        var t=document.getElementById('myTasks');
+        var m=document.getElementById('messages');
+        var c=document.getElementById('calendar');
+        var te=document.getElementById('myTeam');
+        var s=document.getElementById('setting');
+        function home() {
+            t.style.display = "none";
+            m.style.display = "none";
+            c.style.display = "none";
+            te.style.display = "none";
+            s.style.display = "none";
+            if (h.style.display === "none") {
+                h.style.display = "grid";
+            }
+        }
+
+        function tasks() {
+            m.style.display = "none";
+            c.style.display = "none";
+            te.style.display = "none";
+            s.style.display = "none";
+            h.style.display = "none";
+            t.style.display = "block";
+        }
+        function messages() {
+            c.style.display = "none";
+            te.style.display = "none";
+            s.style.display = "none";
+            h.style.display = "none";
+            t.style.display = "none";
+            m.style.display = "block";
+        }
+        function calendar() {
+            m.style.display = "none";
+            te.style.display = "none";
+            s.style.display = "none";
+            h.style.display = "none";
+            t.style.display = "none";
+            c.style.display = "block";
+        }
+        function team() {
+            m.style.display = "none";
+            c.style.display = "none";
+            s.style.display = "none";
+            h.style.display = "none";
+            t.style.display = "none";
+            te.style.display = "block";
+        }
+        function setting() {
+            m.style.display = "none";
+            c.style.display = "none";
+            te.style.display = "none";
+            h.style.display = "none";
+            t.style.display = "none";
+            s.style.display = "block";
+        }
+
+    </script>
+</body>
+</html>
