@@ -12,6 +12,7 @@ import './assets/css/App.css'
 import './assets/css/Banner.css'
 import Calendar from './components/pages/Calendar';
 import Register from './components/auth/Register';
+import User from '../src/components/auth/User'
 
 const App = () => {
 
@@ -35,6 +36,7 @@ const App = () => {
 
                 <Route exact path='/user'>
                     <Dashboard />
+                    <User/>
                 </Route>
               
                 <Route exact path='/tasks'>

@@ -16,6 +16,7 @@ export default class User extends React.Component{
     }
 
     logout(){
+        localStorage.removeItem("token")
         this.setState({
             loggedIn: false
         })
@@ -23,7 +24,7 @@ export default class User extends React.Component{
 
     render(){
         if(this.state.loggedIn === false){
-            return <Redirect to="/logout" />
+            return <Redirect to="/" />
         }
         return(
             <div>
