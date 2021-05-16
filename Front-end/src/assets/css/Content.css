@@ -139,11 +139,13 @@ h2 {
   letter-spacing: 1px;
   font-size: 20px;
 }
-
+i.remove-task {
+  margin-left: 100px;
+}
 .task {
   width: 90%;
   margin: 10px 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.8);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.8);
   border-radius: 2px;
   padding: 5px;
   padding-left: 10px;
