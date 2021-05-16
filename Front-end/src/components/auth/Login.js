@@ -36,7 +36,7 @@ export default class Login extends React.Component{
         try {
             const token = await Axios.post("http://localhost:8000/auth/login/", {username, password})
             console.log(token)
-            localStorage.setItem("token", token)
+            localStorage.setItem("token", token.data.access)
             this.setState({
                 loggedIn: true
             })
