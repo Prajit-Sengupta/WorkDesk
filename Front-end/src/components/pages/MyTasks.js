@@ -54,9 +54,15 @@ const MyTasks = () => {
             <h1>My Tasks</h1>
             <form className='task-form'>
                 <label className='form-label'>Add New Task</label>
+<<<<<<< HEAD
+                 <input type="text" id='content' value={newTask} onChange={handleChange}></input>
+
+                <button className='btn-submit' onClick={handleSubmit}>Add Task</button>
+=======
                 <input type="text" id='content' value={newTask} onChange={handleChange}></input>
                 <button className='btn-submit' onClick={handleSubmit}>Add Task</button>
 
+>>>>>>> 5468c8a32173ff6f084512b0e3fe7fc77ba3123a
             </form>
             {tasks && <TaskList tasks={tasks} />}
         </Fragment>
