@@ -45,7 +45,7 @@ const Register = () => {
                 
             })
             .catch((error) => {
-                console.log("error: " + error);
+                alert(error);
                 setisAuth(false);
                 // this.setState({ requestFailed: true });
             });

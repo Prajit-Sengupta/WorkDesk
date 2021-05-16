@@ -65,7 +65,7 @@ export default class Login extends React.Component{
                     <input type="password" placeholder="Password" value={this.state.password} onChange={this.onChange} name="password" />
                 </div>
                 <input type="submit" className="btnregis" />
-                {this.state.error}
+                {alert(this.state.error)}
             </form>
         )
     }
