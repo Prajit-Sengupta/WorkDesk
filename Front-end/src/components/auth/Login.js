@@ -1,8 +1,8 @@
-import React from "react"
-import {Redirect} from "react-router-dom"
-import Axios from "axios"
+import React from "react";
+import {Redirect} from "react-router-dom";
+import Axios from "axios";
 
-import '../../assets/css/Register.css'
+import '../../assets/css/Register.css';
 
 export default class Login extends React.Component{
 
@@ -25,6 +25,7 @@ export default class Login extends React.Component{
 
     onChange(ev){
         this.setState({
+            ...this.state,
             [ev.target.name]: ev.target.value
         })
     }
@@ -34,6 +35,7 @@ export default class Login extends React.Component{
         const {username, password} = this.state
         try {
             const token = await Axios.post("http://localhost:8000/auth/login/", {username, password})
+            console.log(token)
             localStorage.setItem("token", token)
             this.setState({
                 loggedIn: true
