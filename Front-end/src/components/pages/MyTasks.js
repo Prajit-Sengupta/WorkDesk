@@ -15,6 +15,15 @@ const MyTasks = () => {
             setTasks(data);
         })
 
+
+    },[])
+
+    const handleChange = (e) => {
+        setnewTask(e.target.value);
+    }
+
+    const handleSubmit = (e) => {
+       e.preventDefault() 
         fetch('http://localhost:8000/todo/task-create/', {
             method: 'POST',
             headers: { 'Content-Type': "application/json" },
@@ -24,21 +33,19 @@ const MyTasks = () => {
             return res.json();
         })
         .then(data => {
+            setTasks(
+                [
+                    {
+                        title: newTask,
+                        id:tasks.length+1
+                    },
+                    ...tasks,
+                   
+                ]
+            )
             console.log(data);
         })
-
-    },[])
-
-    const handleChange = (e) => {
-        setnewTask(e.target.value);
-    }
-    const handleSubmit = (e) => {
-        setTasks(
-            [
-                ...tasks,
-                newTask
-            ]
-        )
+       
     }
 
 
