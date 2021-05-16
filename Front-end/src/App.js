@@ -33,8 +33,8 @@ const App = () => {
                   <Login />
                 </Route>
 
-                <Route exact path='/dashboard'>
-                  <Dashboard />
+                <Route exact path='/user'>
+                    <Dashboard />
                 </Route>
               
                 <Route exact path='/tasks'>
