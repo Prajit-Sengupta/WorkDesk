@@ -36,7 +36,7 @@ const Dashboard = () => {
                             </Link>
                         </li>
                         <li>
-                            <Link to='/'>
+                            <Link to='/logout'>
                                 <span className="icon"><i className="fas fa-sign-out-alt"></i></span>
                                 <span className="title">Sign Out</span>
                             </Link>
