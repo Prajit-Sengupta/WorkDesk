@@ -37,11 +37,11 @@ const MyTasks = () => {
             <h1>My Tasks</h1>
             <form className='task-form' onSubmit = {handleSubmit}>
                 <label className='form-label'>Add New Task</label>
-                <input type="text" id='content' value={newTask} completed={completed} onChange={handleChange}></input>
+                <input type="text" id='content' value={newTask} onChange={handleChange}></input>
                 <button className='btn-submit' type='submit'>Add Task</button>
             </form>
             {tasks && <TaskList tasks={tasks} />}
         </Fragment>
     )
 }
-export default MyTasks
+export default MyTasks;
