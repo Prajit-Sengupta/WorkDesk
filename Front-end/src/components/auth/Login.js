@@ -2,6 +2,8 @@ import React from "react"
 import {Redirect} from "react-router-dom"
 import Axios from "axios"
 
+import '../../assets/css/Register.css'
+
 export default class Login extends React.Component{
 
     constructor(){
@@ -48,10 +50,19 @@ export default class Login extends React.Component{
             return <Redirect to="/user" />
         }
         return(
-            <form onSubmit={this.formSubmit}>
-                <input type="text" placeholder="username" value={this.state.username} onChange={this.onChange} name="username" />
-                <input type="password" placeholder="password" value={this.state.password} onChange={this.onChange} name="password" />
-                <input type="submit" />
+            <form onSubmit={this.formSubmit} className="helloform container login-main">
+
+                <h1>Login!</h1>
+
+                <div className="form-group">
+                    <label>Email ID : </label>
+                    <input type="text" placeholder="username" value={this.state.username} onChange={this.onChange} name="Username" />
+                </div>
+                <div className="form-group">
+                    <label>Password : </label>
+                    <input type="password" placeholder="password" value={this.state.password} onChange={this.onChange} name="Password" />
+                </div>
+                <input type="submit" className="btnregis" />
                 {this.state.error}
             </form>
         )
