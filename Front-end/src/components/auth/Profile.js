@@ -20,7 +20,7 @@ const Profile = () => {
                             className="form-control form-control-lg"
                             placeholder="Your First Name"
                             name="first_name"
-                            autoComplete="off" required
+                            autoComplete="off"
                         />
                     </div>
 
@@ -31,7 +31,7 @@ const Profile = () => {
                             className="form-control form-control-lg"
                             placeholder="Your Last Name"
                             name="last_name"
-                            autoComplete="off" required
+                            autoComplete="off"
                         />
                     </div>
 
@@ -42,7 +42,7 @@ const Profile = () => {
                         className="form-control form-control-lg"
                         placeholder="Phone Number"
                         name="phone"
-                        autoComplete="off" required
+                        autoComplete="off"
                     />
                 </div>
 
@@ -53,7 +53,7 @@ const Profile = () => {
                         className="form-control form-control-lg"
                         placeholder="Your Email"
                         name="email"
-                        autoComplete="off" required
+                        autoComplete="off"
                     
                     ></input>
                 </div>
@@ -65,7 +65,7 @@ const Profile = () => {
                         className="form-control form-control-lg"
                         placeholder="Username"
                         name="username"
-                        autoComplete="off" required
+                        autoComplete="off"
                     />
                 </div>
                     <div className="form-group-1">
@@ -75,7 +75,7 @@ const Profile = () => {
                             className="form-control form-control-lg"
                             placeholder="Password"
                             name="password" 
-                            autoComplete="off" required
+                            autoComplete="off"
                         ></input>
                     </div>
 
@@ -86,7 +86,7 @@ const Profile = () => {
                             className="form-control form-control-lg"
                             placeholder="Confirm Password"
                             name="password2"
-                            autoComplete="off" required
+                            autoComplete="off"
                         ></input>
                     </div>
 
