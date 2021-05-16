@@ -22,7 +22,7 @@
 }
 
 .form-group input:focus {
-  outline-color: #fc2956;
+  outline:none;
 }
 
 .helloform {
@@ -79,4 +79,28 @@
   font-family: "Poppins", sans-serif;
   letter-spacing: 1px;
   font-size: 20px;
+}
+
+input[type=text]{
+  border-radius: 20px;
+  padding-left: 10px;
+}
+
+input[type=email]{
+  border-radius: 20px;
+  padding-left: 10px;
+}
+
+input[type=tel]{
+  border-radius: 20px;
+  padding-left: 10px;
+}
+
+input[type=password]{
+  border-radius: 20px;
+  padding-left: 10px;
+}
+
+::placeholder{
+  padding-left: 10px;
 }
