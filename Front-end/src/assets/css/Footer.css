@@ -1,0 +1,67 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap");
+
+@font-face {
+  font-family: "Prequel";
+  src: url("../fonts/prequel.otf");
+}
+
+.footer {
+  background-color: #2e2959;
+  color: white;
+  letter-spacing: 2px;
+  font-size: 20px;
+  padding: 20px;
+}
+
+.footerlogo {
+  width: 50%;
+}
+
+.footer-in-1 {
+  margin: auto 0px;
+  padding: 30px;
+}
+.footer-workdesk {
+  font-family: Prequel;
+}
+.footer-in-1 {
+  font-family: Prequel;
+  font-size: 40px;
+}
+
+.footer-in-2 {
+  margin: auto 0px;
+  font-family: "Poppins", sans-serif;
+  padding: 30px;
+  text-align: left;
+  line-height: 60px;
+}
+
+.footer-in-2 h2 {
+  margin-bottom: 50px;
+}
+h2.reach-us {
+  color: #fff;
+}
+.footer-row {
+  letter-spacing: 2px;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+}
+
+/* .footer-underline{
+    text-decoration: underline;
+    text-decoration-color: #FC2956;
+    font-weight: 600;
+} */
+
+.footer-inner-inner {
+  position: relative;
+  top: -8px;
+}
+
+@media (max-width: 321px) {
+  .footer-inner-inner {
+    font-size: 15px;
+  }
+}

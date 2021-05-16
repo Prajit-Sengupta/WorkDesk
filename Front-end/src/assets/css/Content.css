@@ -1,0 +1,156 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+h1 {
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  color: #330748;
+  margin-top: 80px;
+  margin-bottom: 50px;
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+.task-form {
+  margin: auto;
+  width: 600px;
+  text-align: center;
+}
+
+.task-form input {
+  margin-top: 15px;
+  height: 40px;
+}
+
+.reminder-list {
+  margin: auto;
+  width: 700px;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.list li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.list li h4 {
+  background: #330748;
+  width: 200px;
+  padding: 10px 50px;
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+.list li p {
+  background: #ea1d63;
+  width: 300px;
+  padding: 10px 35px;
+  margin-bottom: 9px;
+}
+
+span.day {
+  padding-right: 10px;
+}
+span.time {
+  padding-left: 10px;
+}
+
+.login-portal {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+h2 {
+  color: #330748;
+  font-size: 3rem;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.login-form {
+  width: 500px;
+  height: 600px;
+  text-align: center;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  padding: 0 60px;
+  border-radius: 10px;
+}
+
+.login-form .lead {
+  font-size: 14px;
+  text-align: left;
+  color: #ea1d63;
+  margin-bottom: 24px;
+}
+
+.login-form input {
+  margin: 0;
+}
+
+.btn-submit {
+  display: inline-block;
+  background: #330748;
+  color: #fff;
+  padding: 0.5rem 1.4rem;
+  font-size: 1.2rem;
+  border: none;
+  cursor: pointer;
+  margin-right: 0.5rem;
+  transition: opacity 0.2s ease-in;
+  outline: none;
+  margin-top: 10px;
+  border-radius: 5px;
+  margin-bottom: 50px;
+}
+.tasks {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 600px;
+  margin: auto;
+  /* margin-left: 80px; */
+  background: #330748;
+  color: #fff;
+  font-size: 1rem;
+  text-align: left;
+}
+.task {
+  width: 90%;
+  margin: 10px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 2px;
+  padding: 5px;
+  padding-left: 10px;
+}
+.task:last-child {
+  border: none;
+  margin-bottom: 20px;
+}
+.task:first-child {
+  margin-top: 20px;
+}
+iframe {
+  border: 0;
+  width: 800px;
+  height: 600px;
+  margin-top: 60px;
+}
+@media (max-width: 768px) {
+  .task-form {
+    margin-left: 80px;
+  }
+  .reminder-list {
+    margin-left: 30px;
+  }
+}

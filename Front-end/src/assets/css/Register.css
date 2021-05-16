@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,300&display=swap");
+
+@font-face {
+  font-family: "Prequel";
+  src: url("../fonts/prequel.otf");
+}
+
+.register-main label {
+  color: white;
+  text-align: left;
+  font-family: "Poppins", sans-serif;
+  font-size: 600;
+  letter-spacing: 1px;
+  font-size: 20px;
+}
+
+.form-group input {
+  margin: 0 auto;
+}
+.form-group-2 input {
+  margin-bottom: 50px;
+}
+
+.form-group input:focus {
+  outline-color: #fc2956;
+}
+
+.helloform {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #393a70;
+  padding: 50px;
+  border-radius: 30px;
+}
+
+.helloform h1 {
+  font-family: Prequel;
+  letter-spacing: 2px;
+  font-size: 50px;
+  color: white;
+}
+
+.btnregis {
+  padding: 13px 20px 13px 20px;
+  font-size: 18px;
+  color: #fff !important;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 400;
+  border-radius: 50px;
+  background-color: #fc2956;
+  border: none;
+  margin-top: 30px;
+  text-decoration: none;
+}
+
+.btnregis:focus {
+  outline: none;
+}
+
+.register-heading {
+  margin: 30px 0;
+}
+
+.login-main label {
+  color: white;
+  text-align: left;
+  font-family: "Poppins", sans-serif;
+  font-size: 600;
+  letter-spacing: 1px;
+  font-size: 20px;
+  margin: 20px 0px;
+}
