@@ -53,7 +53,7 @@ const MyTasks = () => {
         <Fragment>
             <h1>My Tasks</h1>
             <form className='task-form'>
-                <label className='form-label'>Add New Task</label>
+                <label className='form-label abcd'>Add New Task</label>
                 <input type="text" id='content' value={newTask} onChange={handleChange}></input>
                 <button className='btn-submit' onClick={handleSubmit}>Add Task</button>
 

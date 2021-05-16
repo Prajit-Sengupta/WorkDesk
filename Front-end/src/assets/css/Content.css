@@ -127,9 +127,19 @@ h2 {
   /* margin-left: 80px; */
   background: #fc2956;
   color: #fff;
-  font-size: 1rem;
   text-align: left;
+  font-family: "Poppins", sans-serif;
+  letter-spacing: 1px;
+  font-size: 20px;
 }
+
+.abcd{
+  color: black;
+  font-family: "Poppins", sans-serif;
+  letter-spacing: 1px;
+  font-size: 20px;
+}
+
 .task {
   width: 90%;
   margin: 10px 0;
