@@ -1,9 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
+@font-face {
+  font-family: "Prequel";
+  src: url("../fonts/prequel.otf");
+}
+
 h1 {
   text-align: center;
-  font-family: "Poppins", sans-serif;
-  color: #330748;
+  font-family: Prequel;
+  color: #fc2956;
   margin-top: 80px;
   margin-bottom: 50px;
   font-size: 3rem;
@@ -41,7 +46,7 @@ h1 {
 }
 
 .list li h4 {
-  background: #330748;
+  background: #393a70;
   width: 200px;
   padding: 10px 50px;
   font-size: 20px;
@@ -49,7 +54,7 @@ h1 {
 }
 
 .list li p {
-  background: #ea1d63;
+  background: #fc2956;
   width: 300px;
   padding: 10px 35px;
   margin-bottom: 9px;
@@ -71,7 +76,7 @@ span.time {
 }
 
 h2 {
-  color: #330748;
+  color: #393a70;
   font-size: 3rem;
   margin-top: 40px;
   margin-bottom: 40px;
@@ -89,7 +94,7 @@ h2 {
 .login-form .lead {
   font-size: 14px;
   text-align: left;
-  color: #ea1d63;
+  color: #fc2956;
   margin-bottom: 24px;
 }
 
@@ -99,7 +104,7 @@ h2 {
 
 .btn-submit {
   display: inline-block;
-  background: #330748;
+  background: #fc2956;
   color: #fff;
   padding: 0.5rem 1.4rem;
   font-size: 1.2rem;
@@ -120,7 +125,7 @@ h2 {
   width: 600px;
   margin: auto;
   /* margin-left: 80px; */
-  background: #330748;
+  background: #fc2956;
   color: #fff;
   font-size: 1rem;
   text-align: left;
