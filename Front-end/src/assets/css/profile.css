@@ -1,0 +1,50 @@
+@font-face {
+    font-family: "Prequel";
+    src: url("../fonts/prequel.otf");
+  }
+  
+.h1-profile{
+    font-family: Prequel;
+    letter-spacing: 2px;
+    font-size: 50px;
+    color: #fc2956;
+}
+
+.btnregis-1{
+    padding: 13px 20px 13px 20px;
+    font-size: 18px;
+    color: #fff !important;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 400;
+    border-radius: 50px;
+    background-color: #fc2956;
+    border: none;
+    margin-top: 30px;
+    text-decoration: none;
+    margin: 20px 0px 50px 0px;
+}
+
+input[type=text]{
+    border-radius: 20px;
+    padding-left: 10px;
+}
+
+input[type=email]{
+    border-radius: 20px;
+    padding-left: 10px;
+}
+
+input[type=tel]{
+    border-radius: 20px;
+    padding-left: 10px;
+}
+
+input[type=password]{
+    border-radius: 20px;
+    padding-left: 10px;
+}
+
+::placeholder{
+    padding-left: 10px;
+}
