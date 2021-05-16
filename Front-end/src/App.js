@@ -1,4 +1,6 @@
 import React from 'react';
+
+import Profile from './components/auth/Profile';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Dashboard from './components/layout/Dashboard';
 import './App.css';
@@ -52,6 +54,11 @@ const App = () => {
                 <Route exact path='/calendar'>
                   <Dashboard />
                   <div className="container"><Calendar /></div>
+                </Route>
+
+                <Route exact path='/setting'>
+                  <Dashboard />
+                  <div className="container"></div>
                 </Route>
 
               </Switch>
