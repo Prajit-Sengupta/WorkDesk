@@ -24,6 +24,7 @@ const MyTasks = () => {
 
     const handleSubmit = (e) => {
        e.preventDefault() 
+       
         fetch('http://localhost:8000/todo/task-create/', {
             method: 'POST',
             headers: { 'Content-Type': "application/json" },
@@ -58,7 +59,7 @@ const MyTasks = () => {
                 <button className='btn-submit' onClick={handleSubmit}>Add Task</button>
 
             </form>
-            {tasks && <TaskList tasks={tasks} />}
+            {tasks && <TaskList setTasks={setTasks} tasks={tasks} />}
         </Fragment>
     )
 }
