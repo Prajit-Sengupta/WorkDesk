@@ -1,28 +1,59 @@
-import { Link } from 'react-router-dom';
-import '../../assets/css/Register.css';
+import React from "react"
+import {Redirect} from "react-router-dom"
+import Axios from "axios"
 
-const Login = () => {
-    return ( 
-        <div className="login-main">
+export default class Login extends React.Component{
 
-        <form className="helloform container">
+    constructor(){
+        super()
+        let loggedIn = false
+        
+        const token = localStorage.getItem("token")
+        if(token) loggedIn = true
 
-        <h1 className='register-heading'>Login!</h1>
+        this.state = {
+            username: "",
+            password: "",
+            loggedIn,
+            error: ""
+        }
+        this.onChange =  this.onChange.bind(this)
+        this.formSubmit = this.formSubmit.bind(this)
+    }
 
-            <div className="form-group">
-                <label>Email ID : </label>
-                <input type="email" className="form-control form-control-lg" placeholder="Your Email" name="email" autoComplete="off"></input>
-            </div>
+    onChange(ev){
+        this.setState({
+            [ev.target.name]: ev.target.value
+        })
+    }
 
-        <div className="form-group form-group-2">
-            <label>Password : </label>
-            <input type="password" className="form-control form-control-lg" placeholder="Password" name="password" autoComplete="off"></input>
-        </div>
-        <Link to='/dashboard' style={{ textDecoration: 'none' }} className="btnregis">Login</Link>
-        </form>
+    async formSubmit(ev){
+        ev.preventDefault()
+        const {username, password} = this.state
+        try {
+            const token = await Axios.post("http://localhost:8000/auth/login/", {username, password})
+            localStorage.setItem("token", token)
+            this.setState({
+                loggedIn: true
+            })
+        } catch (err) {
+            this.setState({
+                error: err.message
+            })
+        }
+    }
 
-        </div>
-     );
+    render(){
+        if(this.state.loggedIn === true){
+            return <Redirect to="/user" />
+        }
+        return(
+            <form onSubmit={this.formSubmit}>
+                <input type="text" placeholder="username" value={this.state.username} onChange={this.onChange} name="username" />
+                <input type="password" placeholder="password" value={this.state.password} onChange={this.onChange} name="password" />
+                <input type="submit" />
+                {this.state.error}
+            </form>
+        )
+    }
 }
- 
-export default Login;
