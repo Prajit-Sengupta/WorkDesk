@@ -56,11 +56,11 @@ export default class Login extends React.Component{
 
                 <div className="form-group">
                     <label>Email ID : </label>
-                    <input type="text" placeholder="username" value={this.state.username} onChange={this.onChange} name="Username" />
+                    <input type="text" placeholder="Username" value={this.state.username} onChange={this.onChange} name="username" />
                 </div>
                 <div className="form-group">
                     <label>Password : </label>
-                    <input type="password" placeholder="password" value={this.state.password} onChange={this.onChange} name="Password" />
+                    <input type="password" placeholder="Password" value={this.state.password} onChange={this.onChange} name="password" />
                 </div>
                 <input type="submit" className="btnregis" />
                 {this.state.error}
