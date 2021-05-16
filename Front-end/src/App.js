@@ -58,7 +58,7 @@ const App = () => {
 
                 <Route exact path='/setting'>
                   <Dashboard />
-                  <div className="container"></div>
+                  <div className="container"><Profile /></div>
                 </Route>
 
               </Switch>
