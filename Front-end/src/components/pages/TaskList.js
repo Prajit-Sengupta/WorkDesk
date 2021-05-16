@@ -7,16 +7,15 @@ const TaskList = ({ tasks, setTasks }) => {
         console.log(e.target.id)
         const copy= [...tasks];
         setTasks(copy.filter(t=>t.id!=e.target.id))
-        // fetch(`http://localhost:8000/todo/task-delete/${e.target.id}`, { method: 'DELETE' })
-        // .then(() =>
-        //  {  tasks.splice(e.target.id,1)
-        //      console.log('Delete successful')});
+        fetch(`http://localhost:8000/todo/task-delete/${e.target.id}`, { method: 'DELETE' })
+        .then(() =>
+         {console.log('Delete successful')});
     }
     return (
         <ul className='tasks'>
             { tasks.map( (task,index) => (
                 <li className="task">
-                    <p> {task.title} <i id ={task.id} className='fas fa-times-circle' onClick={(e)=>handleDelete(e)}></i> </p>
+                    <p> {task.title} <i id ={task.id} className='fas remove-task float-right fa-times-circle' onClick={(e)=>handleDelete(e)}></i> </p>
                 </li>
             ))}
         </ul>

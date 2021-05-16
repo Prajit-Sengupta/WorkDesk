@@ -24,7 +24,10 @@ const MyTasks = () => {
 
     const handleSubmit = (e) => {
        e.preventDefault() 
-       
+       if(newTask == '') {
+           console.error('Please add a task');
+       }
+       else {
         fetch('http://localhost:8000/todo/task-create/', {
             method: 'POST',
             headers: { 'Content-Type': "application/json" },
@@ -46,7 +49,7 @@ const MyTasks = () => {
             )
             console.log(data);
         })
-       
+    }
     }
 
 
