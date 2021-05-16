@@ -49,7 +49,7 @@ export default class Login extends React.Component{
 
     render(){
         if(this.state.loggedIn === true){
-            return <Redirect to="/user" />
+            return <Redirect to="/tasks" />
         }
         return(
             <form onSubmit={this.formSubmit} className="helloform container login-main">
