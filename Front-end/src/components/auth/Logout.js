@@ -30,7 +30,7 @@ export default class User extends React.Component{
         return(
             <div>
                 <h1 className="h1-profile">Do you want to log out?</h1>
-                <button onClick={this.logout} className="buttonregis-1">Logout</button>
+                <button onClick={this.logout} className="btnregis-1">Logout</button>
             </div>
         )
     }
