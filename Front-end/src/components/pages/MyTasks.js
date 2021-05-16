@@ -14,30 +14,31 @@ const MyTasks = () => {
         .then(data => {
             setTasks(data);
         })
-    },[])
+
+        fetch('http://localhost:8000/todo/task-create/', {
+            method: 'POST',
+            headers: { 'Content-Type': "application/json" },
+            body: JSON.stringify({ title: newTask, completed: true })
+        })
+        .then((res) => {
+            return res.json();
+        })
+        .then(data => {
+            console.log(data);
+        })
+    },[newTask])
 
     const handleChange = (e) => {
         setnewTask(e.target.value);
     }
     
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        
-        fetch('http://localhost:8000/todo/task-create/', {
-            method: 'POST',
-            headers: { 'Content-Type': "application/json" },
-            body: JSON.stringify({ title: newTask, completed: true })
-        }).then((res) => {
-            console.log(res.status);
-        })
-    }
-    
     return (
         <Fragment>
             <h1>My Tasks</h1>
-            <form className='task-form' onSubmit = {handleSubmit}>
+            <form className='task-form'>
                 <label className='form-label'>Add New Task</label>
-                <input type="text" id='content' value={newTask}  onChange={handleChange}></input>
+      <input type="text" id='content' value={newTask} onChange={handleChange}></input>
+
                 <button className='btn-submit' type='submit'>Add Task</button>
             </form>
             {tasks && <TaskList tasks={tasks} />}
