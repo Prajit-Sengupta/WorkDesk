@@ -5,10 +5,9 @@ import '../../assets/css/Content.css';
 const MyTasks = () => {
     const [tasks, setTasks] = useState(null);
     const [newTask, setnewTask] = useState('');
-    const [completed, setCompleted] = useState('false');
     
     useEffect(() => {
-        fetch('http://localhost:8000/tasks')
+        fetch('http://localhost:8000/todo/task-list/')
         .then(res => {
             return res.json();
         })
@@ -19,16 +18,15 @@ const MyTasks = () => {
 
     const handleChange = (e) => {
         setnewTask(e.target.value);
-        setCompleted('true');
     }
     
     const handleSubmit = (e) => {
         e.preventDefault();
         
-        fetch('http://localhost:8000/tasks', {
+        fetch('http://localhost:8000/todo/task-create/', {
             method: 'POST',
             headers: { 'Content-Type': "application/json" },
-            body: JSON.stringify({ title: newTask, completed: completed })
+            body: JSON.stringify({ title: newTask, completed: true })
         }).then((res) => {
             console.log(res.status);
         })

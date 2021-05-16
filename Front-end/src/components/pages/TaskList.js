@@ -5,7 +5,7 @@ const TaskList = ({ tasks }) => {
         <ul className='tasks'>
             { tasks.map( task => (
                 <li className="task">
-                    <p>{task.title}</p>
+                    <p>{task.id} {task.title} {task.completed}</p>
                 </li>
             ))}
         </ul>
