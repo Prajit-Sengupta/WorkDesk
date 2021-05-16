@@ -32,13 +32,14 @@ const Register = () => {
         })
             .then((response) => {
                 console.log(response.status)
+                if (response.status==201)
+                {setisAuth(true)}
                 return response.json([0]);
-
             })
 
             .then((data) => {
                 console.log(data)
-                setisAuth(true);
+                // setisAuth(true);
                 // this.setState({ isLoading: false, downlines: data.response });
                
                 
